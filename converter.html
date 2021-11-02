@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./converter.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <title>Converter</title>
+</head>
+<body>
+    <div class="container">
+        <!--header-->
+        <header class="header-menu">
+            <div class="header-title"><i class="fas fa-money-check-alt"></i>Currency Converter</div>
+        </header>
+
+        <!--main-->
+        <main>
+
+            <!--карточка-->
+            <div class="converter-card">
+                <form>
+                    <h1 class="card-title">exchange rates for today</h1>
+
+                    <!--курсы валют-->
+                    <div class="courses">
+                        <div class="course-item card card-body">
+                            <div class="course-item-title">
+                                USD quotation</div>
+                            <div class="course-item-value" data-value="USD">--.--</div>
+                        </div>
+                        <div class="course-item card card-body">
+                            <div class="course-item-title">
+                                EUR quotation</div>
+                            <div class="course-item-value" data-value="EUR">--.--</div>
+                        </div>
+                        <div class="course-item card card-body">
+                            <div class="course-item-title">
+                                100 RUB quotation</div>
+                            <div class="course-item-value" data-value="100 RUB">--.--</div>
+                        </div>
+                    </div>
+
+                    <div class="converter-row">
+                        <div class="conv-col">
+                            <label for="name">take my money:</label>
+
+                            <select disabled class="form-control" id="exampleFormControlSelect1">
+                                <option value="BYN" selected>BYN — Rubles</option>
+                            </select>
+
+                            <input id="input" type="number" class="input" placeholder="How much money do you have?" autofocus>
+                        </div>
+                        
+                        <div class="conv-col">
+                            <label for="name">receive:</label>
+
+                            <select class="form-control" id="select">
+                                <option value="USD">USD — Dollar USA</option>
+                                <option value="EUR">EUR — Euro</option>
+                                <option value="RUB">RUB — 100 Russian rubles</option>
+                            </select>
+
+                            <input id="result" type="number" class="result">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- <iframe frameborder="0" height="131" marginheight="0" marginwidth="0" scrolling="no" src="https://admin.myfin.by/outer/informer/vitebsk" width="240"></iframe> -->
+        
+        </main>
+
+    </div>
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
