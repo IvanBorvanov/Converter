@@ -1,85 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./converter.css">
+    <link rel="stylesheet" href="./media.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <title>Converter</title>
 </head>
 <body>
-    <div class="container">
-        <!--header-->
-        <header class="header-menu">
-            <div class="header-title"><i class="fas fa-money-check-alt"></i>Currency Converter</div>
-        </header>
+    <!--header-->
+    <header class="header-menu">
+        <div class="header-title"><i class="fas fa-money-check-alt"></i>конвертер валют</div>
+    </header>
 
-        <!--main-->
-        <main>
-
-            <!--карточка-->
-            <div class="converter-card">
-                <form>
-                    <h1 class="card-title">exchange rates for today</h1>
+    <!--main-->
+    <main>
+        <div class="container">
+            <div class="converter-box">
+        
+                <!--карточка-->
+                <div class="converter-card">
+                    <h1 class="card-title"><p>курсы валют НБРБ</p><p>на сегодня</p></h1>
+                    <h3 class="card-subtitle">курс на завтра активируется после полуночи</h3>
 
                     <!--курсы валют-->
                     <div class="courses">
-                        <div class="course-item card card-body">
-                            <div class="course-item-title">
-                                USD quotation</div>
+                        <div class="course-item">
+                            <div class="course-item-title"><img class="course-item-img" src="./img/icons/by.png" alt="">BYN</div>
+                            <div class="course-item-value" data-value="BYN">1</div>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-item-title"><img class="course-item-img" src="./img/icons/us.png" alt="">USD</div>
                             <div class="course-item-value" data-value="USD">--.--</div>
                         </div>
-                        <div class="course-item card card-body">
-                            <div class="course-item-title">
-                                EUR quotation</div>
+                        <div class="course-item">
+                            <div class="course-item-title"><img class="course-item-img" src="./img/icons/europeanunion.png" alt="">EUR</div>
                             <div class="course-item-value" data-value="EUR">--.--</div>
                         </div>
-                        <div class="course-item card card-body">
-                            <div class="course-item-title">
-                                100 RUB quotation</div>
+                        <div class="course-item">
+                            <div class="course-item-title"><img class="course-item-img" src="./img/icons/ru.png" alt="">100 RUB</div>
                             <div class="course-item-value" data-value="100 RUB">--.--</div>
                         </div>
-                    </div>
-
-                    <div class="converter-row">
-                        <div class="conv-col">
-                            <label for="name">take my money:</label>
-
-                            <select disabled class="form-control" id="exampleFormControlSelect1">
-                                <option value="BYN" selected>BYN — Rubles</option>
-                            </select>
-
-                            <input id="input" type="number" class="input" placeholder="How much money do you have?" autofocus>
+                        <div class="course-item">
+                            <div class="course-item-title"><img class="course-item-img" src="./img/icons/kz.png" alt="">KZT</div>
+                            <div class="course-item-value" data-value="KZT">--.--</div>
                         </div>
+                        <div class="course-item">
+                            <div class="course-item-title"><img class="course-item-img" src="./img/icons/ua.png" alt="">UAH</div>
+                            <div class="course-item-value" data-value="UAH">--.--</div>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-item-title"><img class="course-item-img" src="./img/icons/pl.png" alt="">PLN</div>
+                            <div class="course-item-value" data-value="PLN">--.--</div>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-item-title"><img class="course-item-img" src="./img/icons/cz.png" alt="">CNY</div>
+                            <div class="course-item-value" data-value="CNY">--.--</div>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-item-title"><img class="course-item-img" src="./img/icons/jp.png" alt="">JPY</div>
+                            <div class="course-item-value" data-value="JPY">--.--</div>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-item-title"><img class="course-item-img" src="./img/icons/tr.png" alt="">TRY</div>
+                            <div class="course-item-value" data-value="TRY">--.--</div>
+                        </div>
+                        <div class="course-item">
+                            <div class="course-item-title"><img class="course-item-img" src="./img/icons/dk.png" alt="">DKK</div>
+                            <div class="course-item-value" data-value="DKK">--.--</div>
+                        </div>
+                    </div>
+                </div>
+
                         
-                        <div class="conv-col">
-                            <label for="name">receive:</label>
+                <!--карточка с конвертацией-->
+                <div class="calculator-card">
+                    <h1 class="card-title"><p>калькулятор</p><p>валют онлайн</p></h1>
+                    <h3 class="card-subtitle">введите в поле набора необходимую сумму</h3>
 
-                            <select class="form-control" id="select">
-                                <option value="USD">USD — Dollar USA</option>
-                                <option value="EUR">EUR — Euro</option>
-                                <option value="RUB">RUB — 100 Russian rubles</option>
-                            </select>
-
-                            <input id="result" type="number" class="result">
-                        </div>
+                    <div class="calculator-card-item">
+                        <div class="calculator-card-item-text"><img class="calculator-item-img" src="./img/icons/by.png" alt=""><span>BYN</span></div>
+                        <input id="input" type="number" style="direction: rtl;" class="input" placeholder="Введите сумму" autofocus>
                     </div>
-                </form>
+                    <!--results input-->
+                    <div class="calculator-card-item">
+                        <div class="calculator-card-item-text"><img class="calculator-item-img" src="./img/icons/us.png" alt=""><span>USD</span></div>
+                        <input id="result_USD" type="number" class="result" style="direction: rtl;" placeholder="0">
+                    </div>
+                    <div class="calculator-card-item">
+                        <div class="calculator-card-item-text"><img class="calculator-item-img" src="./img/icons/europeanunion.png" alt=""><span>EUR</span></div>
+                        <input id="result_EUR" type="number" class="result" style="direction: rtl;" placeholder="0">
+                    </div>
+                    <div class="calculator-card-item">
+                        <div class="calculator-card-item-text"><img class="calculator-item-img" src="./img/icons/ru.png" alt=""><span>RUB</span></div>
+                        <input id="result_RUB" type="number" class="result" style="direction: rtl;" placeholder="0">
+                    </div>
+                    <div class="calculator-card-item">
+                        <div class="calculator-card-item-text"><img class="calculator-item-img" src="./img/icons/kz.png" alt=""><span>KZT</span></div>
+                        <input id="result_KZT" type="number" class="result" style="direction: rtl;" placeholder="0">
+                    </div>
+                    <div class="calculator-card-item">
+                        <div class="calculator-card-item-text"><img class="calculator-item-img" src="./img/icons/ua.png" alt=""><span>UAH</span></div>
+                        <input id="result_UAH" type="number" class="result" style="direction: rtl;" placeholder="0">
+                    </div>
+                    <div class="calculator-card-item">
+                        <div class="calculator-card-item-text"><img class="calculator-item-img" src="./img/icons/pl.png" alt=""><span>PLN</span></div>
+                        <input id="result_PLN" type="number" class="result" style="direction: rtl;" placeholder="0">
+                    </div>
+                    <div class="calculator-card-item">
+                        <div class="calculator-card-item-text"><img class="calculator-item-img" src="./img/icons/cz.png" alt=""><span>CNY</span></div>
+                        <input id="result_CNY" type="number" class="result" style="direction: rtl;" placeholder="0">
+                    </div>
+                    <div class="calculator-card-item">
+                        <div class="calculator-card-item-text"><img class="calculator-item-img" src="./img/icons/jp.png" alt=""><span>JPY</span></div>
+                        <input id="result_JPY" type="number" class="result" style="direction: rtl;" placeholder="0">
+                    </div>
+                    <div class="calculator-card-item">
+                        <div class="calculator-card-item-text"><img class="calculator-item-img" src="./img/icons/tr.png" alt=""><span>TRY</span></div>
+                        <input id="result_TRY" type="number" class="result" style="direction: rtl;" placeholder="0">
+                    </div>
+                    <div class="calculator-card-item">
+                        <div class="calculator-card-item-text"><img class="calculator-item-img" src="./img/icons/dk.png" alt=""><span>DKK</span></div>
+                        <input id="result_DKK" type="number" class="result" style="direction: rtl;" placeholder="0">
+                    </div>
+                </div>
+
+                <!--карточка с конвертацией РФ-->
+                <div class="calculator-card">
+                    <h1 class="card-title"><p>калькулятор валют</p><p> онлайн по курсу НБ РФ</p></h1>
+                    <h3 class="card-subtitle">введите в поле набора необходимую сумму</h3>
+
+                    <div class="calculator-card-item">
+                        <div class="calculator-card-item-text"><img class="calculator-item-img" src="./img/icons/ru.png" alt=""><span>RUB</span></div>
+                        <input id="RU_input" type="number" style="direction: rtl;" class="input" placeholder="Введите сумму" autofocus>
+                    </div>
+                    <!--results input-->
+                    <div class="calculator-card-item">
+                        <div class="calculator-card-item-text"><img class="calculator-item-img" src="./img/icons/us.png" alt=""><span>USD</span></div>
+                        <input id="RU_result_USD" type="number" class="result" style="direction: rtl;" placeholder="0">
+                    </div>
+                    <div class="calculator-card-item">
+                        <div class="calculator-card-item-text"><img class="calculator-item-img" src="./img/icons/europeanunion.png" alt=""><span>EUR</span></div>
+                        <input id="RU_result_EUR" type="number" class="result" style="direction: rtl;" placeholder="0">
+                    </div>
+                    <div class="calculator-card-item">
+                        <div class="calculator-card-item-text"><img class="calculator-item-img" src="./img/icons/by.png" alt=""><span>BYN</span></div>
+                        <input id="RU_result_BYN" type="number" class="result" style="direction: rtl;" placeholder="0">
+                    </div>
+                </div> 
+
             </div>
-
-            <!-- <iframe frameborder="0" height="131" marginheight="0" marginwidth="0" scrolling="no" src="https://admin.myfin.by/outer/informer/vitebsk" width="240"></iframe> -->
+        </div>
         
-        </main>
+    </main>
 
-    </div>
 
 
     <script src="./main.js"></script>
+    <script src="./main_RUS.js"></script>
 </body>
 </html>

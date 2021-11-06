@@ -1,0 +1,82 @@
+/*media*/
+@media (max-width: 1024px) {
+    .container {
+        max-width: 95%;
+    }
+
+    .card-title {
+        font-size: 15px;
+    }
+
+    .card-subtitle {
+        font-size: 10px;
+    }
+
+    .course-item {
+        padding: 5px;
+    }
+
+    .converter-card {
+        padding: 10px;
+    }
+
+    .course-item-title {
+        font-size: 15px;
+    }
+
+    .course-item-img {
+        height: 12px;
+    }
+
+    .course-item-value {
+        font-size: 15px;
+    }
+
+    .calculator-card {
+        padding: 10px;
+    }
+
+    .calculator-card-item-text {
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    .calculator-item-img {
+        height: 12px;
+    }
+
+    input {
+        font-size: 15px;
+        padding: 5px;        
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        max-width: 60%;
+    }
+
+    .converter-box {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .converter-card {
+        margin-right: 0;
+    }
+    
+    .calculator-card {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .container {
+        max-width: 80%;
+    }
+
+    .header-title {
+        font-size: 25px;
+    }
+}
